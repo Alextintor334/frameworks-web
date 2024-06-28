@@ -1,86 +1,92 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    padding: 20px;
-    color: #333;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
-    text-align: center;
-    padding: 20px 0;
     background-color: #4CAF50;
-    color: white;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    width: 100%;
 }
 
 header h1 {
+    color: #fff;
+    text-align: center;
     margin: 0;
-    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    padding: 20px 0;
 }
 
-section.framework {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 500px;
-    flex: 1 1 calc(50% - 40px);
-    display: flex;
-    flex-direction: column;
+.framework {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section.framework img {
-    width: 100%;
+.framework img {
+    max-width: 100%;
     height: auto;
 }
 
-section.framework .content {
-    padding: 20px;
-}
-
-section.framework h2 {
-    font-size: 1.8rem;
+.framework h2 a {
     color: #4CAF50;
-    margin-bottom: 10px;
+    text-decoration: none;
 }
 
-section.framework p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #666;
+.framework p {
+    text-align: left;
+    margin: 0;
 }
 
 footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 @media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        gap: 10px;
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
-
-    section.framework {
-        max-width: 100%;
-        margin-bottom: 20px;
+    
+    .framework {
+        padding: 10px;
     }
 }

@@ -2,32 +2,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background-color: #4CAF50;
-    padding: 20px 0;
-    width: 100%;
-}
-
-header h1 {
-    color: #fff;
+    color: white;
+    padding: 20px;
     text-align: center;
-    margin: 0;
+    width: 100%;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
@@ -36,57 +26,49 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
 main {
-    padding: 20px 0;
-}
-
-.framework {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 20px 0;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.framework img {
+.card img {
     max-width: 100%;
-    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
 }
 
-.framework h2 a {
+.card h2 a {
     color: #4CAF50;
     text-decoration: none;
 }
 
-.framework p {
+.card p {
     text-align: left;
-    margin: 0;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
     text-align: center;
-    padding: 10px 0;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-}
-
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-    
-    .framework {
-        padding: 10px;
-    }
 }
